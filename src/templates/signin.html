@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+
+{% block registrarse %}
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <form class="row g-3 needs - validation" novalidate>
+
+        <div class="col-md-6">
+          <label for="inputName" class="form-label">Nombre(s)</label>
+          <input type="text" class="form-control" id="inputName" required placeholder="Ingrese aqui su Nombre">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Ingrese aqui sus Apellidos">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="example.correo@gmail.com">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Número de celular</label>
+          <input type="text" class="form-control" id="inputcelular"  pattern="[0-9]+" title="Por favor, introduce solo números">
+        </div>
+
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Domicilio</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Escriba su Calle, número ext. y número int (si es el caso)" title="Por favor, separelo con comas ( , )">
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Estado</label>
+          <select id="inputState" class="form-select">
+            <option selected>Selecciona tu Estado</option>
+            <option>Yucatán</option>
+            <option>Campeche</option>
+            <option>Quintana Roo</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCiudad" class="form-label">Ciudad</label>
+          <input type="text" class="form-control" id="inputCiudad">
+        </div>
+
+        <div class="col-md-2">
+          <label for="inputMunicipio" class="form-label">Municipio</label>
+          <input type="text" class="form-control" id="inputMunicipio">
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </div>
+  </div>
+</div>
+</form>
+{% endblock%}
