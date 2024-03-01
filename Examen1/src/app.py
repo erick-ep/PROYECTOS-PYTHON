@@ -3,8 +3,8 @@ from flask import Flask, render_template
 app = Flask(__name__) 
 
 @app.route('/')
-def base():
-       return render_template('base.html') 
+def index():
+       return render_template('index.html') 
 
 @app.route('/habilidades')
 def habilidades():
@@ -19,8 +19,8 @@ def redes_sociales():
 def sobre_mi():
     return render_template('sobre_mi.html')
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
+@app.route('/base')
+def base():
+    return render_template('base.html')
 
 app.run(debug=True)
