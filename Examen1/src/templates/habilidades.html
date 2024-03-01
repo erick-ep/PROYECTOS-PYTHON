@@ -1,0 +1,103 @@
+{% extends 'base.html'%}
+{% block habilidades %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .accordion-container {
+            max-width: 600px; /* Limita la anchura del acordeón */
+            margin: 0 auto; /* Centra horizontalmente el acordeón */
+            padding: 10px; /* Añade espacio alrededor del acordeón */
+            margin-top: 0px;
+        }
+        .welcome-text {
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 30px;
+            animation: slide 1s ease-in-out infinite alternate;
+          }
+          @keyframes slide {
+              0% {
+                transform: translateY(-10px);
+              }
+              100% {
+                transform: translateY(10px);
+              }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-text">
+        MIS HABILIDADES
+      </div>
+    <div class="accordion-container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Habilidad #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Habilidades de comunicación.</strong>  La capacidad de comunicarme claramente, 
+                        tanto verbalmente como por escrito, es crucial en cualquier entorno laboral. 
+                        Esto puede incluir habilidades de <code>presentación</code>, <code>redacción de informes</code>, 
+                        <code>negociación</code>, etc. 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Habilidad #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Creatividad y pensamiento crítico.</strong>  Tener la capacidad de generar ideas
+                        innovadoras y analizar de forma crítica situaciones y problemas complejos es algo que
+                        realmente ayuda mucho a la hora de realizar proyectos.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Habilidad #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Empatía y habilidad interpersonal.</strong> La capacidad de poder comprender las necesidades
+                        y preocupaciones de los demás, así como de construir relaciones sólidas y positivas con compañeros,
+                        equipos de trabajo es algo que se aprecia demasiado ya que esto afecta considerablemente la eficiencia
+                        del trabajo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+{% endblock%}
